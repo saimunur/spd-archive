@@ -49,11 +49,20 @@
             <a class="nav-link" href="#introduction">Introduction</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#datasets">Datasets</a>
+            <a class="nav-link" href="#methods">Key Methods</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#methods">SPD Methods</a>
-          </li>
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Applications
+                </a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#fgvc">Fine-grained image classification</a>
+                <a class="dropdown-item" href="#generic">Generic/ImageNet image classification</a>
+                <a class="dropdown-item" href="#video">Action/Video classification</a>
+                <a class="dropdown-item" href="#person_re-id">Preson re-identification</a>
+                <a class="dropdown-item" href="#others">Other applications</a>
+                </div>
+            </li>
           <li class="nav-item">
             <a class="nav-link" href="#results">Summary</a>
           </li>
@@ -71,7 +80,8 @@
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
           <h1 class="display-4 text-white mt-5 mb-2">SPD Representations Methods Archive</h1>
-          <p class="lead mb-5 text-white-50">A public directory for the state-of-the-art symmetric positive definitive (SPD) representation methods publised or proposed in recent years and their results on the common fine-grained image benchmark datasets.</p>
+          <p class="lead mb-5 text-white-50">A public directory for the state-of-the-art symmetric positive definitive (SPD) representation methods 
+              that have been publised or proposed in recent years.</p>
         </div>
       </div>
     </div>
@@ -87,75 +97,9 @@
         <h2 id="introduction">Introduction</h2>
         <hr>
 		<blockquote class="blockquote" align="justify">
-			Fine-grained image classification (FGIC) is one of the most challenging and active research area of computer vision. 
-			Recently, symmetric positive definitive (SPD) matrix-based visual representation methods have shown promising performance in FGIC. 
-            This page keeps track of the recent advances in SPD matrix-based visual representation methods for FGIC. Kindly refer to the <a href="#contact" class="text-info">contact</a> section if you have any queries or sugesstions.
+            Recently, symmetric positive definitive (SPD) matrix-based visual representation methods have shown promising performance in various applications such as fine-grained image classification, person re-identification and ImageNet classification. 
+            This page keeps track of the recent advances in SPD matrix-based visual representation methods. Kindly refer to the <a href="#contact" class="text-info">contact</a> section if you have any queries or sugesstions, and interested to add your method in the listings.
 		</blockquote>
-        <br/>
-        
-        <h2 id="datasets">Common fine-grained image datasets</h2>
-        <hr>
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <img class="card-img-top figure-img img-fluid rounded" src="http://www.vision.caltech.edu/visipedia/collage.jpg" alt="">
-            </div>
-            <div class="col-md-9 mb-9">
-                <p class="h5">Caltech-UCSD Birds-200-2011</p>
-                <ul class="list-unstyled">
-                  <li>Number of categories: 200, Number of images: 11,788</li>
-                  <li>Annotations per image: 15 Part Locations, 312 Binary Attributes, 1 Bounding Box</li>
-                </ul>
-                <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html" class="btn btn-dark btn-sm">Project Page</a>
-                <a href="http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz" class="btn btn-success btn-sm">Direct Download link</a>
-                <a href="http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/browse/index.html" class="btn btn-warning btn-sm">Browse Online</a>
-                <a href="http://www.vision.caltech.edu/visipedia/papers/CUB_200_2011.pdf" class="btn btn-info btn-sm">Original Paper</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <img class="card-img-top figure-img img-fluid rounded" src="http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/illustration.png" alt="">
-            </div>
-            <div class="col-md-9 mb-9">
-                <p class="h5">Stanford Cars</p>
-                <ul class="list-unstyled">
-                  <li>Number of categories: 196, Number of images: 16,185</li>
-                  <li>Annotations per image: 1 Bounding Box</li>
-                </ul>
-                <a href="https://ai.stanford.edu/~jkrause/cars/car_dataset.html" class="btn btn-dark btn-sm">Project Page</a>
-                <a href="http://imagenet.stanford.edu/internal/car196/car_ims.tgz" class="btn btn-success btn-sm">Direct Download link</a>
-                <a href="https://ai.stanford.edu/~jkrause/papers/3drr13.pdf" class="btn btn-info btn-sm">Original Paper</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <img class="card-img-top figure-img img-fluid rounded" src="https://people.cs.umass.edu/~smaji/picon/fgvcplanes.png" height=2% alt="">
-            </div>
-            <div class="col-md-9 mb-9">
-                <p class="h5">FGVC-Aircraft</p>
-                <ul class="list-unstyled">
-                  <li>Number of categories: 102, Number of images: 10,200</li>
-                  <li>Annotations per image: 1 Tight Bounding Box</li>
-                </ul>
-                <a href="http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/" class="btn btn-dark btn-sm">Project Page</a>
-                <a href="http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/archives/fgvc-aircraft-2013b.tar.gz" class="btn btn-success btn-sm">Direct Download link</a>
-                <a href="http://arxiv.org/abs/1306.5151" class="btn btn-info btn-sm">Original Paper</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <img class="card-img-top figure-img img-fluid rounded" src="https://storage.googleapis.com/platform-blog-prod/bread-pudding.png" height=2% alt="">
-            </div>
-            <div class="col-md-9 mb-9">
-                <p class="h5">Food-101</p>
-                <ul class="list-unstyled">
-                  <li>Number of categories: 101, Number of images: 101,000</li>
-                  <li>Annotations per image: None</li>
-                </ul>
-                <a href="https://www.vision.ee.ethz.ch/datasets_extra/food-101/" class="btn btn-dark btn-sm">Project Page</a>
-                <a href="http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz" class="btn btn-success btn-sm">Direct Download link</a>
-                <a href="https://www.vision.ee.ethz.ch/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf" class="btn btn-info btn-sm">Original Paper</a>
-            </div>
-        </div>
         <br/>
         
         <h2 id="methods">Selective SPD representation methods</h2>
@@ -471,7 +415,7 @@
             </div>
         </div>
         
-        <div class="row" style="margin-bottom: 20px;">
+        <div class="row" style="margin-bottom: 5px;">
             <div class="col-md-3 mb-3">
                 <img class="card-img-top figure-img img-fluid rounded" src="https://github.com/Ylexx/HBPASM/raw/master/bird_mask.jpg" alt="">
             </div>
@@ -486,6 +430,518 @@
                 <a href="" class="btn btn-outline-info btn-sm">Project Page</a>
             </div>
         </div>
+
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/4eafc362487ac31301f5e33097122bfcd9e7d663/3-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Learning Deep Bilinear Transformation for Fine-grained Image Representation</p>
+                <ul class="list-unstyled">
+                  <li>by Heliang Zheng, Jianlong Fu, Zheng-Jun Zha, Jiebo Luo</li>
+                  <li>at Conference on Neural Information Processing Systems (NIPS), 2019</li>
+                </ul>
+                <a href="http://papers.nips.cc/paper/8680-learning-deep-bilinear-transformation-for-fine-grained-image-representation.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/researchmm/DBTNet" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="applications"></span>
+            </div>
+        </div>
+
+        <h2 id="fgvc" style="margin-top: 40px;">Applications of SPD representation</h2>
+        <hr>
+        <h4 id="bcnn-iccv15" style="margin-top: 20px; margin-bottom: 25px; color: red; font-weight: bold;">Fine-grained/Texture image classification</h4>
+        
+        <div class="row" style="margin-bottom: 20px;" >
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="images/bcnn.jpg" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Bilinear CNNs for Fine-grained Visual Recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Tsung-Yu Lin, Aruni RoyChowdhury, Subhransu Maji</li>
+                  <li>at International Conference on Computer Vision (ICCV), 2015 </li>
+                </ul>
+                <a href="http://vis-www.cs.umass.edu/bcnn/docs/bcnn_iccv15.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://bitbucket.org/tsungyu/bcnn" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="http://vis-www.cs.umass.edu/bcnn/" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="compact_bililear_cvpr16"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/327dc2fd203a7049f3409479ab68e5e2a83cd352/1-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Compact Bilinear Pooling</p>
+                <ul class="list-unstyled">
+                  <li>by Yang Gao, Oscar Beijbom, Ning Zhang, Trevor Darrell</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2016 </li>
+                </ul>
+                <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gao_Compact_Bilinear_Pooling_CVPR_2016_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/gy20073/compact_bilinear_pooling" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="kernel_pool_cvpr17"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/561731afa72e3a09a913da8bf1fa6f6877d8dab6/1-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Kernel Pooling for Convolutional Neural Networks</p>
+                <ul class="list-unstyled">
+                    <li>by Yin Cui, Feng Zhou, Jiang Wang, Xiao Liu, Yuanqing Lin, Serge Belongie</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2017</li>
+                </ul>
+                <a href="https://vision.cornell.edu/se3/wp-content/uploads/2017/04/cui2017cvpr.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://vision.cornell.edu/se3/kernel-pooling-for-convolutional-neural-networks/" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="lowrank_cvpr17"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px; margin-top: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://pic3.zhimg.com/v2-349fdb457d153e8b1dcb01724979d99c_1200x500.jpg" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Low-rank Bilinear Pooling for Fine-Grained Classification</p>
+                <ul class="list-unstyled">
+                  <li>by Shu Kong, Charless Fowlkes</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2017</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Kong_Low-Rank_Bilinear_Pooling_CVPR_2017_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/aimerykong/Low-Rank-Bilinear-Pooling" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="https://www.ics.uci.edu/~skong2/lr_bilinear.html" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="improved_bcnn_bmvc17"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://storage.googleapis.com/groundai-web-prod/media/users/user_249249/project_6854/images/x1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Improved Bilinear Pooling with CNNs</p>
+                <ul class="list-unstyled">
+                  <li>by Tsung-Yu Lin, Subhransu Maji</li>
+                  <li>at British Machine Vision Conference (BMVC), 2017 </li>
+                </ul>
+                <a href="http://vis-www.cs.umass.edu/bcnn/docs/improved_bcnn.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://bitbucket.org/tsungyu/bcnn" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="http://vis-www.cs.umass.edu/bcnn/" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="factorized_bcnn_iccv17"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="http://www.icst.pku.edu.cn/struct/Projects/fbn/figures/dropfactor.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Factorized Bilinear Models for Image Recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Yanghao Li, Naiyan Wang, Jiaying Liu, Xiaodi Hou</li>
+                  <li>at International Conference on Computer Vision (ICCV), 2017</li>
+                </ul>
+                <a href="https://arxiv.org/abs/1611.05709" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/lyttonhao/Factorized-Bilinear-Network" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="http://www.icst.pku.edu.cn/struct/Projects/fbn.html" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="g2denet_cvpr17"></span>
+            </div>
+        </div>
+        
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/6602cf864751e7b64ad18e51fc1c2247edf280a9/2-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">G2DeNet: Global Gaussian Distribution Embedding Network and Its Application to Visual Recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Qilong Wang, Peihua Li, Lei Zhang</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2017</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_G2DeNet_Global_Gaussian_CVPR_2017_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="http://www.peihuali.org/publications/G2DeNet/G2DeNet-FGVC-v1.0.zip" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="recurrent_bcnn_arxiv17"></span>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/ebe8408052d9bf05dc2007d01559dda6129840eb/1-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Where to Focus: Deep Attention-based Spatially Recurrent Bilinear Networks forFine-Grained Visual Recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Lin Wu, Yang Wang</li>
+                  <li>at arXiv:1709.05769, 2017</li>
+                </ul>
+                <a href="https://arxiv.org/pdf/1709.05769.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/vkkhare/fine_grainedVA_pytorch" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="isqrt_cov_cvpr18"></span>
+            </div>
+        </div>
+        
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://camo.githubusercontent.com/f2cdc5f25d743e922fd2c23e8a2a42e1f25c1e36/687474703a2f2f7065696875616c692e6f72672f70696374757265732f666173745f4d504e2d434f562e4a5047" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization</p>
+                <ul class="list-unstyled">
+                  <li>by Peihua Li, Jiangtao Xie, Qilong Wang, Zilin Gao</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2018</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Towards_Faster_Training_CVPR_2018_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/jiangtaoxie/fast-MPN-COV" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="http://peihuali.org/iSQRT-COV/index.html" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="hbp_eccv18"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 1px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src=" https://storage.googleapis.com/groundai-web-prod/media%2Fusers%2Fuser_145954%2Fproject_230081%2Fimages%2Fx1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Hierarchical Bilinear Pooling for Fine-Grained Visual Recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Chaojian Yu, Xinyi Zhao, Qi Zheng, Peng Zhang, Xinge You</li>
+                  <li>at European Conference on Computer Vision (ECCV), 2018</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Chaojian_Yu_Hierarchical_Bilinear_Pooling_ECCV_2018_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/ChaojianYu/Hierarchical-Bilinear-Pooling" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="grasmann_pool_cvpr18"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="images/cgp-eccv18.jpg" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Grassmann Pooling as Compact Homogeneous Bilinear Pooling for Fine-Grained Visual Classification</p>
+                <ul class="list-unstyled">
+                  <li>by Xing Wei, Yue Zhang, Yihong Gong, Jiawei Zhang, Nanning Zheng</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2018</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xing_Wei_Grassmann_Pooling_for_ECCV_2018_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <span id="smso_pool_eccv18"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://storage.googleapis.com/groundai-web-prod/media%2Fusers%2Fuser_9613%2Fproject_133715%2Fimages%2Fx1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Statistically-motivated Second-order Pooling</p>
+                <ul class="list-unstyled">
+                  <li>by Kaicheng Yu, Mathieu Salzmann</li>
+                  <li>at European Conference on Computer Vision (ECCV), 2018</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Kaicheng_Yu_Statistically-motivated_Second-order_Pooling_ECCV_2018_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/kcyu2014/smsop" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="deep_kspd_eccv18"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://storage.googleapis.com/groundai-web-prod/media/users/user_1799/project_1698/images/figure/KSPD-Architecture.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">DeepKSPD: learning kernel-matrix-based SPD representation for fine-grained image recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Melih Engin, Lei Wang, Luping Zhou, Xinwang Liu</li>
+                  <li>at European Conference on Computer Vision (ECCV), 2018</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Melih_Engin_DeepKSPD_Learning_Kernel-matrix-based_ECCV_2018_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <span id="soda_eccv18"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="http://vis-www.cs.umass.edu/o2dp/fig/pipe2.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Second-order Democratic Aggregation</p>
+                <ul class="list-unstyled">
+                  <li>by Tsung-Yu Lin, Subhransu Maji, Piotr Koniusz</li>
+                  <li>at European Conference on Computer Vision (ECCV), 2018</li>
+                </ul>
+                <a href="http://vis-www.cs.umass.edu/o2dp/o2dp.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/tsungyu/o2dp" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="http://vis-www.cs.umass.edu/o2dp/" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="gmn_access18"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/07aadc9dceccaf87b626178a3533a84608d109fb/4-Figure2-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Fine-Grained Image Classification With Gaussian Mixture Layer</p>
+                <ul class="list-unstyled">
+                  <li>by Jingyun Liang, Jinlin Guo, Xin Liu, Songyang Lao</li>
+                  <li>at IEEE Access, Volume 6, pages 53356-53367, 2018</li>
+                </ul>
+                <a href="https://ieeexplore.ieee.org/document/8468317" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <span id="spd_aggregation_net_pr19"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/b5d3ee3cf721d361c875f9c371325c2ab59645a9/2-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Learning a Robust Representation via a Deep Network on Symmetric Positive Definite Manifolds</p>
+                <ul class="list-unstyled">
+                  <li>by Zhi Gao, Yuwei Wu, Xingyuan Bu, Yunde Jia </li>
+                  <li>at Pattern Recognition, Volume 92, Pages 1-12, 2019</li>
+                </ul>
+                <a href="https://arxiv.org/pdf/1711.06540.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <span id="compact_approx_arxiv19"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="images/arXiv-1906.01851v1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Compact Approximation for Polynomial of Covariance Feature</p>
+                <ul class="list-unstyled">
+                  <li>by Yusuke Mukuta, Tatsuaki Machida, Tatsuya Harada</li>
+                  <li>at arXiv:1906.01851, 2019.</li>
+                </ul>
+                <a href="https://arxiv.org/abs/1906.01851" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <span id="hbpasm_access19"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 5px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://github.com/Ylexx/HBPASM/raw/master/bird_mask.jpg" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Fine-Grained Classification via Hierarchical Bilinear Pooling With Aggregated Slack Mask</p>
+                <ul class="list-unstyled">
+                  <li>by Min Tan, Guijun Wang, Jian Zhou, Zhiyou Peng, Meilian Zheng</li>
+                  <li>at IEEE Access, Volume 7, pages 117944-117953, 2019</li>
+                </ul>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8805063" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/Ylexx/HBPASM" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="bilinear_transformation_nips19"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/4eafc362487ac31301f5e33097122bfcd9e7d663/3-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Learning Deep Bilinear Transformation for Fine-grained Image Representation</p>
+                <ul class="list-unstyled">
+                  <li>by Heliang Zheng, Jianlong Fu, Zheng-Jun Zha, Jiebo Luo</li>
+                  <li>at Conference on Neural Information Processing Systems (NIPS), 2019</li>
+                </ul>
+                <a href="http://papers.nips.cc/paper/8680-learning-deep-bilinear-transformation-for-fine-grained-image-representation.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/researchmm/DBTNet" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="generic"></span>
+            </div>
+        </div>
+        <br/>
+
+        <h4 id="mpncov_iccv17" style="margin-bottom: 25px; color: red; font-weight: bold;">ImageNet/Generic image classification</h4>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://github.com/jiangtaoxie/MPN-COV/raw/master/doc/figures/MPN-COV.jpg" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Is Second-order Information Helpful for Large-scale Visual Recognition?</p>
+                <ul class="list-unstyled">
+                  <li>by Peihua Li, Jiangtao Xie, Qilong Wang, Wangmeng Zuo</li>
+                  <li>at International Conference on Computer Vision (ICCV), 2017</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Is_Second-Order_Information_ICCV_2017_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/jiangtaoxie/MPN-COV" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="http://peihuali.org/iSQRT-COV/index.html" class="btn btn-outline-info btn-sm">Project Page</a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://camo.githubusercontent.com/f2cdc5f25d743e922fd2c23e8a2a42e1f25c1e36/687474703a2f2f7065696875616c692e6f72672f70696374757265732f666173745f4d504e2d434f562e4a5047" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization</p>
+                <ul class="list-unstyled">
+                  <li>by Peihua Li, Jiangtao Xie, Qilong Wang, Zilin Gao</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2018</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Towards_Faster_Training_CVPR_2018_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/jiangtaoxie/fast-MPN-COV" class="btn btn-outline-success btn-sm">Source Code</a>
+                <a href="http://peihuali.org/iSQRT-COV/index.html" class="btn btn-outline-info btn-sm">Project Page</a>
+                <span id="gm_sop_nips18"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://github.com/ZilinGao/GM-SOP/raw/master/GM-SOP_arch.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Global Gated Mixture of Second-order Pooling for Improving Deep Convolutional Neural Networks</p>
+                <ul class="list-unstyled">
+                  <li>by Qilong Wang, Zilin Gao, Jiangtao Xie, Wangmeng Zuo and Peihua Li</li>
+                  <li>at Advances in Neural Information Processing Systems (NIPS), 2018</li>
+                </ul>
+                <a href="https://papers.nips.cc/paper/7403-global-gated-mixture-of-second-order-pooling-for-improving-deep-convolutional-neural-networks.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/ZilinGao/GM-SOP" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="global_sop_cvpr19"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://github.com/ZilinGao/Global-Second-order-Pooling-Convolutional-Networks/raw/master/fig/GSoP_net&block.jpg" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Global Second-order Pooling Convolutional Networks</p>
+                <ul class="list-unstyled">
+                  <li>by Zilin Gao, Jiangtao Xie, Qilong Wang, Peihua Li</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Gao_Global_Second-Order_Pooling_Convolutional_Networks_CVPR_2019_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/ZilinGao/Global-Second-order-Pooling-Convolutional-Networks" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="global_generalized_cvpr19"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/2c1136b2fe1c7b845dd2caa8389a81503f924fec/3-Figure2-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Deep Global Generalized Gaussian Networks</p>
+                <ul class="list-unstyled">
+                  <li>by Qilong Wang, Peihua Li, Qinghua Hu, Pengfei Zhu, Wangmeng Zuo</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Deep_Global_Generalized_Gaussian_Networks_CVPR_2019_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <span id="video"></span>
+            </div>
+        </div>
+        <br/>
+
+        <h4 id="" style="margin-bottom: 25px; color: red; font-weight: bold;">Action parsing/Temporal modelling</h4>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://miro.medium.com/max/2992/1*9JZd6aBX4j41QRCLXinhiQ.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Local Temporal Bilinear Pooling for Fine-Grained Action Parsing</p>
+                <ul class="list-unstyled">
+                  <li>by Yan Zhang, Siyu Tang, Krikamol Muandet, Christian Jarvers, Heiko Neumann</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Local_Temporal_Bilinear_Pooling_for_Fine-Grained_Action_Parsing_CVPR_2019_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/yz-cnsdqz/TemporalActionParsing-FineGrained" class="btn btn-outline-success btn-sm">Source Code</a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/7303ce1fe8f54f45e4558eb81368bda9dfe2793f/3-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Approximated Bilinear Modules for Temporal Modeling</p>
+                <ul class="list-unstyled">
+                  <li>by Xinqi Zhu, Chang Xu, Langwen Hui, Cewu Lu, Dacheng Tao</li>
+                  <li>at International Conference on Computer Vision (ICCV), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Zhu_Approximated_Bilinear_Modules_for_Temporal_Modeling_ICCV_2019_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/zhuxinqimac/abm-pytorch" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="person_re-id"></span>
+            </div>
+        </div>
+        <br/>
+
+        <h4 id="" style="margin-bottom: 25px; color: red; font-weight: bold;">Person Re-indentification</h4>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/8efce72999dd3225a1a7f65d0d3544c9847625a4/3-Figure2-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Second-Order Non-Local Attention Networks for Person Re-Identification</p>
+                <ul class="list-unstyled">
+                  <li>by Bryan (Ning) Xia, Yuan Gong, Yizhe Zhang, Christian Poellabauer</li>
+                  <li>at International Conference on Computer Vision (ICCV), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Xia_Second-Order_Non-Local_Attention_Networks_for_Person_Re-Identification_ICCV_2019_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/061f205009b39438e39448164064233162884252/5-Figure3-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Mixed High-Order Attention Network for Person Re-Identification</p>
+                <ul class="list-unstyled">
+                  <li>by Binghui Chen, Weihong Deng, Jiani Hu</li>
+                  <li>at International Conference on Computer Vision (ICCV), 2019</li>
+                </ul>
+                <a href="https://arxiv.org/pdf/1908.05819.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/chenbinghui1/MHN" class="btn btn-outline-success btn-sm">Source Code</a>
+                <span id="others"></span>
+            </div>
+        </div>
+        <br/>
+
+        <h4 id="raidg-cvpr16" style="margin-bottom: 25px; color: red; font-weight: bold;">Others</h4>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/60ee7943bc7d4241138619d54f6ee58c77a961a9/5-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">RAID-G: Robust Estimation of Approximate Infinite Dimensional Gaussian with Application to Material Recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Qilong Wang, Peihua Li1, Wangmeng Zuo, Lei Zhang</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2016</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Wang_RAID-G_Robust_Estimation_CVPR_2016_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="http://www.peihuali.org/publications/RAID-G/RIAD-G_V1.zip" class="btn btn-outline-success btn-sm">Source Code</a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/ece7f51e40856da3e52e62e1eaff9c9c5b1d4e8f/3-Figure2-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">A Neural Network Based on SPD Manifold Learning for Skeleton-Based Hand Gesture Recognition</p>
+                <ul class="list-unstyled">
+                  <li>by Xuan Son Nguyen, Luc Brun, Olivier Lezoray, Sebastien Bougleux</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Nguyen_A_Neural_Network_Based_on_SPD_Manifold_Learning_for_Skeleton-Based_CVPR_2019_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="" class="btn btn-outline-success btn-sm">Source Code</a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/ac0cbd2ca95c6f898fd7fbf2aaa52261ec70f089/4-Figure2-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Second-Order Attention Network for Single Image Super-Resolution</p>
+                <ul class="list-unstyled">
+                  <li>by Tao Dai, Jianrui Cai, Yongbing Zhang, Shu-Tao Xia, Lei Zhang</li>
+                  <li>at International Conference on Computer Vision and Pattern Recognition (CVPR), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Dai_Second-Order_Attention_Network_for_Single_Image_Super-Resolution_CVPR_2019_paper.html" class="btn btn-outline-dark btn-sm">Paper Link</a>
+                <a href="https://github.com/daitao/SAN" class="btn btn-outline-success btn-sm">Source Code</a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-3 mb-3">
+                <img class="card-img-top figure-img img-fluid rounded" src="https://d3i71xaburhd42.cloudfront.net/3f6139a3017f3948b357eb41d41aee4d7a47eabb/3-Figure1-1.png" alt="">
+            </div>
+            <div class="col-md-9 mb-9">
+                <p class="h5">Bilinear Attention Networks for Person Retrieval</p>
+                <ul class="list-unstyled">
+                  <li>by Pengfei Fang, Jieming Zhou, Soumava Kumar Roy, Lars Petersson, Mehrtash Harandi</li>
+                  <li>at International Conference on Computer Vision (ICCV), 2019</li>
+                </ul>
+                <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Fang_Bilinear_Attention_Networks_for_Person_Retrieval_ICCV_2019_paper.pdf" class="btn btn-outline-dark btn-sm">Paper Link</a>
+            </div>
+        </div>
+        <br/>
         
         
         <h2 id="results">Analysis of existing methods and their performance</h2>
@@ -521,7 +977,7 @@
         <tbody style="text-align: center;">
             <tr>
                 <td>2015</td>
-                <td><a href="http://vis-www.cs.umass.edu/bcnn/docs/bcnn_iccv15.pdf" class="text-info">Bilinear CNN</a></td>
+                <td><a href="#bcnn-iccv15" class="text-info">Bilinear CNN</a></td>
                 <td>VGG-M/VGG-16 </td>
 				<td>SVM</td>
 				<td>448X448</td>
@@ -538,7 +994,7 @@
             </tr>
             <tr>
                 <td>2016</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Wang_RAID-G_Robust_Estimation_CVPR_2016_paper.pdf" class="text-info">RAID-G</a></td> <!--Link-->
+                <td><a href="#raidg-cvpr16" class="text-info">RAID-G</a></td> <!--Link-->
                 <td>VGG19 </td> <!--Backbone model-->
                 <td>SVM</td> <!--Classifier-->
                 <td>224X224</td> <!--Input image Size-->
@@ -555,7 +1011,7 @@
             </tr>
 			<tr>
                 <td>2016</td> <!--Publication-->
-                <td><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gao_Compact_Bilinear_Pooling_CVPR_2016_paper.pdf" class="text-info">Compact Bilinear</a></td> <!--Link-->
+                <td><a href="#compact_bililear_cvpr16" class="text-info">Compact Bilinear</a></td> <!--Link-->
                 <td>VGGM/VGG16 </td> <!--Backbone model-->
 				<td>SVM</td> <!--Classifier-->
 				<td>448X448</td> <!--Input image Size-->
@@ -572,7 +1028,7 @@
             </tr>
             <tr>
                 <td>2017</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Cui_Kernel_Pooling_for_CVPR_2017_paper.pdf" class="text-info">Kernel Pooling</a></td> <!--Link-->
+                <td><a href="#kernel_pool_cvpr17" class="text-info">Kernel Pooling</a></td> <!--Link-->
                 <td>VGG16/ResNet50</td> <!--Backbone model-->
 				<td>SVM</td> <!--Classifier-->
 				<td>448X448</td> <!--Input image Size-->
@@ -589,7 +1045,7 @@
             </tr>
             <tr>
                 <td>2017</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Kong_Low-Rank_Bilinear_Pooling_CVPR_2017_paper.pdf" class="text-info">Low-Rank Bilinear</a></td> <!--Link-->
+                <td><a href="#lowrank_cvpr17" class="text-info">Low-Rank Bilinear</a></td> <!--Link-->
                 <td>VGG16/ResNet50</td> <!--Backbone model-->
 				<td>SVM</td> <!--Classifier-->
 				<td>448X448</td> <!--Input image Size-->
@@ -606,7 +1062,7 @@
             </tr>
             <tr>
                 <td>2017</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Li_Is_Second-Order_Information_ICCV_2017_paper.pdf" class="text-info">MPN-COV</a></td> <!--Link-->
+                <td><a href="#mpncov_iccv17" class="text-info">MPN-COV</a></td> <!--Link-->
                 <td>VGG16/ResNet50</td> <!--Backbone model-->
                 <td>SVM</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -623,7 +1079,7 @@
             </tr>
             <tr>
                 <td>2017</td> <!--Publication-->
-                <td><a href="http://vis-www.cs.umass.edu/bcnn/docs/improved_bcnn.pdf" class="text-info">Improved BCNN</a></td> <!--Link-->
+                <td><a href="#improved_bcnn_bmvc17" class="text-info">Improved BCNN</a></td> <!--Link-->
                 <td>VGGM/VGG16</td> <!--Backbone model-->
                 <td>SVM</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -640,7 +1096,7 @@
             </tr>
             <tr>
                 <td>2017</td> <!--Publication-->
-                <td><a href="http://winsty.net/papers/fbn.pdf" class="text-info">Factorized bilinear</a></td> <!--Link-->
+                <td><a href="#factorized_bcnn_iccv17" class="text-info">Factorized bilinear</a></td> <!--Link-->
                 <td>ResNet50</td> <!--Backbone model-->
                 <td>SVM</td> <!--Classifier-->
                 <td>112X112</td> <!--Input image Size-->
@@ -657,7 +1113,7 @@
             </tr>
             <tr>
                 <td>2017</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_G2DeNet_Global_Gaussian_CVPR_2017_paper.pdf" class="text-info">G2DeNet</a></td> <!--Link-->
+                <td><a href="#g2denet_cvpr17" class="text-info">G2DeNet</a></td> <!--Link-->
                 <td>VGG16</td> <!--Backbone model-->
                 <td>SVM</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -674,7 +1130,7 @@
             </tr>
             <tr>
                 <td>2017</td> <!--Publication-->
-                <td><a href="https://arxiv.org/pdf/1709.05769.pdf" class="text-info">Recurrent Bilinear</a></td> <!--Link-->
+                <td><a href="#recurrent_bcnn_arxiv17" class="text-info">Recurrent Bilinear</a></td> <!--Link-->
                 <td>VGG16</td> <!--Backbone model-->
                 <td>SVM</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -691,7 +1147,7 @@
             </tr>
             <tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Towards_Faster_Training_CVPR_2018_paper.pdf" class="text-info">iSQRT-COV</a></td> <!--Link-->
+                <td><a href="#isqrt_cov_cvpr18" class="text-info">iSQRT-COV</a></td> <!--Link-->
                 <td>AlexNet/ResNet101</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>224X224</td> <!--Input image Size-->
@@ -708,7 +1164,7 @@
             </tr>
             <tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xing_Wei_Grassmann_Pooling_for_ECCV_2018_paper.pdf" class="text-info">Grassmann Pooling</a></td> <!--Link-->
+                <td><a href="#grasmann_pool_cvpr18" class="text-info">Grassmann Pooling</a></td> <!--Link-->
                 <td>VGG16</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -725,7 +1181,7 @@
             </tr>
             <tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Chaojian_Yu_Hierarchical_Bilinear_Pooling_ECCV_2018_paper.pdf" class="text-info">Hierarchical Bilinear</a></td> <!--Link-->
+                <td><a href="#hbp_eccv18" class="text-info">Hierarchical Bilinear</a></td> <!--Link-->
                 <td>VGG16</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -742,7 +1198,7 @@
             </tr>
 			<tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Kaicheng_Yu_Statistically-motivated_Second-order_Pooling_ECCV_2018_paper.pdf" class="text-info">SMSO Pooling</a></td> <!--Link-->
+                <td><a href="#smso_pool_eccv18" class="text-info">SMSO Pooling</a></td> <!--Link-->
                 <td>VGG16/ResNet50</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -759,7 +1215,7 @@
             </tr>
 			<tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Melih_Engin_DeepKSPD_Learning_Kernel-matrix-based_ECCV_2018_paper.pdf" class="text-info">DeepKSPD</a></td> <!--Link-->
+                <td><a href="#deep_kspd_eccv18" class="text-info">DeepKSPD</a></td> <!--Link-->
                 <td>VGG16</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -776,7 +1232,7 @@
             </tr>
 			<tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Tsung-Yu_Lin_Second-order_Democratic_Aggregation_ECCV_2018_paper.pdf" class="text-info">SoDA</a></td> <!--Link-->
+                <td><a href="#soda_eccv18" class="text-info">SoDA</a></td> <!--Link-->
                 <td>VGG16/ResNet50</td> <!--Backbone model-->
                 <td>SVM</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -793,7 +1249,7 @@
             </tr>
 			<tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="https://papers.nips.cc/paper/7403-global-gated-mixture-of-second-order-pooling-for-improving-deep-convolutional-neural-networks.pdf" class="text-info">GM-SOP</a></td> <!--Link-->
+                <td><a href="#gm_sop_nips18" class="text-info">GM-SOP</a></td> <!--Link-->
                 <td>ResNet18</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>64X64</td> <!--Input image Size-->
@@ -810,7 +1266,7 @@
             </tr>
             <tr>
                 <td>2018</td> <!--Publication-->
-                <td><a href="https://ieeexplore.ieee.org/document/8468317" class="text-info">GMNet</a></td> <!--Link-->
+                <td><a href="#gmn_access18" class="text-info">GMNet</a></td> <!--Link-->
                 <td>VGG16/VGG19</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>random</td> <!--Input image Size-->
@@ -827,7 +1283,7 @@
             </tr>
             <tr>
                 <td>2019</td> <!--Publication-->
-                <td><a href="https://arxiv.org/pdf/1711.06540.pdf" class="text-info">SPD aggregation Network</a></td> <!--Link-->
+                <td><a href="#spd_aggregation_net_pr19" class="text-info">SPD aggregation Network</a></td> <!--Link-->
                 <td>VGG16</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>224X224</td> <!--Input image Size-->
@@ -844,7 +1300,7 @@
             </tr>
             <tr>
                 <td>2019</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Gao_Global_Second-Order_Pooling_Convolutional_Networks_CVPR_2019_paper.pdf" class="text-info">Global SoP</a></td> <!--Link-->
+                <td><a href="#global_sop_cvpr19" class="text-info">Global SoP</a></td> <!--Link-->
                 <td>ResNet50</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>224X224</td> <!--Input image Size-->
@@ -861,7 +1317,7 @@
             </tr>
             <tr>
                 <td>2019</td> <!--Publication-->
-                <td><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Deep_Global_Generalized_Gaussian_Networks_CVPR_2019_paper.pdf" class="text-info">3G-Net</a></td> <!--Link-->
+                <td><a href="#global_generalized_cvpr19" class="text-info">3G-Net</a></td> <!--Link-->
                 <td>ResNet50/ResNet101</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>224X224</td> <!--Input image Size-->
@@ -878,7 +1334,7 @@
             </tr>
             <tr>
                 <td>2019</td> <!--Publication-->
-                <td><a href="https://arxiv.org/pdf/1906.01851.pdf" class="text-info">iPCCP-Net</a></td> <!--Link-->
+                <td><a href="#compact_approx_arxiv19" class="text-info">iPCCP-Net</a></td> <!--Link-->
                 <td>ResNet50/ResNet101</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -895,24 +1351,7 @@
             </tr>
             <tr>
                 <td>2019</td> <!--Publication-->
-                <td><a href="https://arxiv.org/pdf/1906.01851.pdf" class="text-info">iPCCP-Net</a></td> <!--Link-->
-                <td>ResNet50/ResNet101</td> <!--Backbone model-->
-                <td>Softmax</td> <!--Classifier-->
-                <td>448X448</td> <!--Input image Size-->
-                <td>Flip</td> <!--Data augementation-->
-                <td>SGD</td> <!--Optimizer-->
-                <td>8k</td> <!--Output Size-->
-                <td style="border-left: 2px lightgrey solid;">88.4</td> <!--CUB-->
-                <td>91.6</td> <!--Airplane-->
-                <td>94.1</td> <!--Cars-->
-                <td>--</td><!--MIT-->
-                <td>--</td><!--DTD-->
-                <td>--</td><!--DB6-->
-                <td>--</td><!--ImageNet-->
-            </tr>
-            <tr>
-                <td>2019</td> <!--Publication-->
-                <td><a href="https://arxiv.org/pdf/1906.01851.pdf" class="text-info">HBPASM</a></td> <!--Link-->
+                <td><a href="#hbpasm_access19" class="text-info">HBPASM</a></td> <!--Link-->
                 <td>ResNet-34</td> <!--Backbone model-->
                 <td>Softmax</td> <!--Classifier-->
                 <td>448X448</td> <!--Input image Size-->
@@ -927,6 +1366,24 @@
                 <td>--</td><!--DB6-->
                 <td>--</td><!--ImageNet-->
             </tr>
+            <tr>
+                <td>2019</td> <!--Publication-->
+                <td><a href="#bilinear_transformation_nips19" class="text-info">DBTNet</a></td> <!--Link-->
+                <td>ResNet50/ResNet101</td> <!--Backbone model-->
+                <td>Softmax</td> <!--Classifier-->
+                <td>448X448</td> <!--Input image Size-->
+                <td>--</td> <!--Data augementation-->
+                <td>SGD</td> <!--Optimizer-->
+                <td>2k</td> <!--Output Size-->
+                <td style="border-left: 2px lightgrey solid;">88.1</td> <!--CUB-->
+                <td>91.6</td> <!--Airplane-->
+                <td>94.5</td> <!--Cars-->
+                <td>--</td><!--MIT-->
+                <td>--</td><!--DTD-->
+                <td>--</td><!--DB6-->
+                <td>--</td><!--ImageNet-->
+            </tr>
+            
         </tbody>
     </table>
     <br/>
